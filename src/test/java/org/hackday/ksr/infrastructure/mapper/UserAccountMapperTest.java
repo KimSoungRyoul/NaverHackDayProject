@@ -14,6 +14,8 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @ActiveProfiles("dev")
@@ -38,7 +40,7 @@ public class UserAccountMapperTest {
     @Test
     public void testInsert_Select(){
 
-        accountMapper.insert(new UserAccount("sky5367@naver.com","1234","김성렬","010-7237-6602"));
+        accountMapper.insert(new UserAccount("sky5367@naver.com","1234",new Date()));
 
         UserAccount account=accountMapper.selectOne("sky5367@naver.com");
 
