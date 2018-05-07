@@ -1,13 +1,14 @@
-package org.hackday.ksr.domain.User.valueObj;
+package org.hackday.ksr.domain.user.valueObj;
 
 
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.Setter;
-import org.hackday.ksr.domain.User.UserAccount;
+import lombok.*;
+import org.hackday.ksr.domain.user.UserAccount;
 
-@Getter(AccessLevel.PRIVATE)
+@Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
+
 public class UserInfo {
 
     //UserInfo 기본키는 userEmail;

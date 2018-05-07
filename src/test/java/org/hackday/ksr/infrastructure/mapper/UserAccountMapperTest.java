@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 
 
 import org.apache.ibatis.session.SqlSession;
-import org.hackday.ksr.domain.User.UserAccount;
+import org.hackday.ksr.domain.user.UserAccount;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

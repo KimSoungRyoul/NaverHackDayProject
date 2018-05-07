@@ -1,10 +1,9 @@
 package org.hackday.ksr.configuration;
 
 import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.type.BooleanTypeHandler;
 import org.apache.ibatis.type.DateTypeHandler;
-import org.apache.ibatis.type.EnumTypeHandler;
 import org.apache.ibatis.type.TypeHandler;
+import org.hackday.ksr.domain.user.UserAccount;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.annotation.MapperScan;
@@ -25,14 +24,20 @@ public class MybatisConfiguration {
 		SqlSessionFactoryBean sessionFactory=new SqlSessionFactoryBean();
 		//sessionFactory.setEnvironment("dev");
 		sessionFactory.setDataSource(dataSource);
-		
+		sessionFactory.setTypeAliasesPackage("org.hackday.ksr.domain.user");
+
+		Class[] clzzes={UserAccount.class};
+
+		sessionFactory.setTypeAliases(clzzes);
+
+
 		Resource[] res=new PathMatchingResourcePatternResolver()
 							.getResources("classpath:/mappers/*_mapper.xml");
 		
 
 		
 		sessionFactory.setMapperLocations(res);
-		sessionFactory.setTypeAliasesPackage("org.hackday.ksr.domain");
+
 		sessionFactory.setTypeHandlers(new TypeHandler[] {
 				new DateTypeHandler()
 

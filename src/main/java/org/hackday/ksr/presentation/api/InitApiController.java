@@ -1,11 +1,12 @@
 package org.hackday.ksr.presentation.api;
 
 
-import org.hackday.ksr.domain.User.UserAccount;
+import org.hackday.ksr.domain.user.UserAccount;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Date;
 
 @Controller
 public class InitApiController {
@@ -16,7 +17,7 @@ public class InitApiController {
     public @ResponseBody UserAccount tHello(){
 
 
-        return new UserAccount("asdf","asdfff","dfdf","01230");
+        return new UserAccount("asdf","asdfff",new Date());
     }
 
 

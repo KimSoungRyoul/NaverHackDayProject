@@ -5,15 +5,15 @@
 <mapper namespace="org.hackday.ksr.infrastructure.mapper.UserAccountMapper">
 
 	<insert id="insert">
-		insert into user_account (`email`,`password`,`username`,`phone_num`)
-			values (#{email},#{password},#{username},#{phoneNum})
+		insert into user_account (`id`,`password`)
+			values (#{id},#{password})
 
 	</insert>
 
-	<select id="selectOne" resultType="UserAccount">
-		select 'email','password','name','phone_num'
+	<select id="selectOne" resultType="userAccount">
+		select 'id','password','sign_up_date'
 			from user_account
-		where email=#{email}
+		where id=#{id}
 	</select>
 
 

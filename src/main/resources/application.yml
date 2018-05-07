@@ -1,11 +1,13 @@
 
+server:
+  port: 8080
 
 spring:
     profiles: product
 
     datasource:
-      url: jdbc:mysql://localhost:3306/hackday_db?useSSL=false&characterEncoding=utf8
-      username: hackday_dev
+      url: jdbc:mysql://106.10.40.221:3306/hackday_db?useSSL=false&characterEncoding=utf8
+      username: sky5367
       password: 1234
 
 

@@ -1,7 +1,7 @@
 package org.hackday.ksr.infrastructure.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
-import org.hackday.ksr.domain.User.UserAccount;
+import org.hackday.ksr.domain.user.UserAccount;
 
 @Mapper
 public interface UserAccountMapper {
