@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 
-<mapper namespace="org.hackday.ksr.infrastructure.mapper.UserAccountMapper">
+<mapper namespace="org.hackday.backend.mapper.UserAccountMapper">
 
 	<insert id="insert">
 		insert into user_account (`id`,`password`)
@@ -10,7 +10,7 @@
 
 	</insert>
 
-	<select id="selectOne" resultType="userAccount">
+	<select id="selectOne" resultType="org.hackday.backend.domain.UserAccount">
 		select 'id','password','sign_up_date'
 			from user_account
 		where id=#{id}

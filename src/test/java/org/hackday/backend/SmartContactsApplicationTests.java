@@ -1,4 +1,4 @@
-package org.hackday.ksr;
+package org.hackday.backend;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 @ActiveProfiles("dev")
 @SpringBootTest
 @Transactional
-public class KsrApplicationTests {
+public class SmartContactsApplicationTests {
 
     @Test
     public void contextLoads() {
